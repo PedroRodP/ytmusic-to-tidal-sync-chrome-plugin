@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "YT Music → TIDAL Sync",
+  "description": "Sync tracks from YouTube Music Liked Songs to a TIDAL playlist.",
+  "version": "1.0.0",
+  "permissions": [
+    "storage",
+    "identity"
+  ],
+  "host_permissions": [
+    "https://music.youtube.com/*",
+    "https://openapi.tidal.com/*",
+    "https://auth.tidal.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "YT Music → TIDAL Sync",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://music.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "styles.css"
+      ],
+      "matches": [
+        "https://music.youtube.com/*"
+      ]
+    }
+  ]
+}

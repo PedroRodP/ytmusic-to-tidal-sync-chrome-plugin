@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>YT Music → TIDAL Sync</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 12px;
+        font-family: Arial, sans-serif;
+        width: 320px;
+        color: #111;
+      }
+      h1 {
+        font-size: 16px;
+        margin: 0 0 10px;
+      }
+      .field {
+        margin-bottom: 10px;
+      }
+      label {
+        display: block;
+        font-size: 12px;
+        margin-bottom: 4px;
+      }
+      input {
+        width: 100%;
+        padding: 6px 8px;
+        box-sizing: border-box;
+      }
+      .actions {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      button {
+        padding: 6px 10px;
+        cursor: pointer;
+      }
+      #status {
+        margin-top: 10px;
+        font-size: 12px;
+        color: #333;
+      }
+      .ok { color: #0a7d1e; }
+      .warn { color: #9a6b00; }
+      .err { color: #b00020; }
+    </style>
+  </head>
+  <body>
+    <h1>YT Music → TIDAL Sync</h1>
+
+    <div class="field">
+      <label for="clientIdInput">TIDAL Client ID</label>
+      <input id="clientIdInput" type="text" placeholder="Enter OAuth client_id" />
+    </div>
+
+    <div class="field">
+      <label for="playlistIdInput">TIDAL Playlist ID</label>
+      <input id="playlistIdInput" type="text" placeholder="Enter target playlist ID" />
+    </div>
+
+    <div class="actions">
+      <button id="saveButton">Save</button>
+      <button id="loginButton">Login</button>
+      <button id="logoutButton">Logout</button>
+    </div>
+
+    <div id="status">Checking status…</div>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

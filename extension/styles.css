@@ -1,0 +1,55 @@
+.ytm-tidal-sync-button {
+  margin-left: 8px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  font-size: 12px;
+  cursor: pointer;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.ytm-tidal-sync-button.unsynced {
+  background: #1f1f1f;
+  color: #fff;
+  border-color: #444;
+}
+
+.ytm-tidal-sync-button.syncing {
+  background: #2d2d2d;
+  color: #ffcf66;
+  border-color: #ffcf66;
+}
+
+.ytm-tidal-sync-button.synced {
+  background: #0e4420;
+  color: #d9ffe5;
+  border-color: #2bd66f;
+}
+
+.ytm-tidal-sync-button.not-found {
+  background: #4a3a09;
+  color: #ffe7a6;
+  border-color: #e0b33a;
+}
+
+.ytm-tidal-sync-button.error {
+  background: #4d1111;
+  color: #ffd5d5;
+  border-color: #ff6b6b;
+}
+
+.ytm-tidal-sync-all {
+  margin-left: 8px;
+  padding: 6px 10px;
+  border-radius: 14px;
+  border: 1px solid #2bd66f;
+  background: #10351c;
+  color: #d9ffe5;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.ytm-tidal-sync-all:hover {
+  filter: brightness(1.1);
+}
